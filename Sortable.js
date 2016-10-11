@@ -458,11 +458,11 @@
 			}
 
 			try {
-				if (document.selection) {					
-					// Timeout neccessary for IE9					
+				if (document.selection) {
+					// Timeout neccessary for IE9
 					setTimeout(function () {
 						document.selection.empty();
-					});					
+					});
 				} else {
 					window.getSelection().removeAllRanges();
 				}
@@ -893,6 +893,8 @@
 
 						// Save sorting
 						this.save();
+					} else {
+						_dispatchEvent(this, rootEl, 'end', dragEl, rootEl, oldIndex, oldIndex);
 					}
 				}
 
@@ -1369,6 +1371,6 @@
 
 
 	// Export
-	Sortable.version = '1.4.2';
+	Sortable.version = '1.4.2.1';
 	return Sortable;
 });
