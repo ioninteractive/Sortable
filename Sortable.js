@@ -909,6 +909,8 @@
 
 						// Save sorting
 						this.save();
+					} else {
+						_dispatchEvent(this, rootEl, 'end', dragEl, rootEl, oldIndex, oldIndex);
 					}
 				}
 
